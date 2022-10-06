@@ -1,0 +1,38 @@
+[package]
+name = "coinbase-pro-api"
+version = "0.1.0"
+description = "A rudimentary REST API public client for Coinbase Pro"
+authors = ["Skelectric <Skelectricity@Protonmail.com>"]
+license = "Unlicense"
+edition = "2021"
+keywords = ["trading", "crypto"]
+categories = ["accessibility"]
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[lib]
+name = "coinbase_pro_api"
+crate-type = ["cdylib"]
+
+[dependencies]
+# Datetime formatting (for testing)
+chrono = "0.4.22"
+
+# Decimals
+rust_decimal = "1.26.1"
+rust_decimal_macros = "1.26.1"
+
+# HTTP and Rate Limiting
+reqwest = { version = "0.11.12", features = ["json"] }
+governor = "0.5.0"
+
+# Errors
+anyhow = "1.0.65"
+
+# Async
+tokio = { version = "1.21.2", features = ["full"] }
+futures = "0.3.24"
+
+# Serde
+serde = { version = "1.0.143", features = ["derive"] }
+serde_json = "1.0.83"
