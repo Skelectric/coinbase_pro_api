@@ -1,6 +1,6 @@
 [package]
 name = "coinbase-pro-api"
-version = "0.1.0"
+version = "0.1.1"
 description = "A rudimentary REST API public client for Coinbase Pro"
 authors = ["Skelectric <Skelectricity@Protonmail.com>"]
 license = "Unlicense"
@@ -12,7 +12,7 @@ categories = ["accessibility"]
 
 [lib]
 name = "coinbase_pro_api"
-crate-type = ["cdylib"]
+crate-type = ["rlib"]
 
 [dependencies]
 # Datetime formatting (for testing)
