@@ -1,6 +1,6 @@
 [package]
 name = "coinbase-pro-api"
-version = "0.1.1"
+version = "0.2.0"
 description = "A rudimentary REST API public client for Coinbase Pro"
 authors = ["Skelectric <Skelectricity@Protonmail.com>"]
 license = "Unlicense"
@@ -15,12 +15,8 @@ name = "coinbase_pro_api"
 crate-type = ["rlib"]
 
 [dependencies]
-# Datetime formatting (for testing)
+# Datetime formatting
 chrono = "0.4.22"
-
-# Decimals
-rust_decimal = "1.26.1"
-rust_decimal_macros = "1.26.1"
 
 # HTTP and Rate Limiting
 reqwest = { version = "0.11.12", features = ["json"] }
@@ -33,6 +29,5 @@ anyhow = "1.0.65"
 tokio = { version = "1.21.2", features = ["full"] }
 futures = "0.3.24"
 
-# Serde
-serde = { version = "1.0.143", features = ["derive"] }
-serde_json = "1.0.83"
+# For Testing
+lazy_static = "1.4.0"
